@@ -2,7 +2,7 @@ module ScormCloud
 	class DebugService < BaseService
 
 		def ping()
-			url = "http://cloud.scorm.com/api?method=rustici.debug.ping"
+			url = "http://cloud.scorm.com/EngineWebServices/api?method=rustici.debug.ping"
 			data = connection.call_url(url)
 			raise "Bad Server Response" unless data.include?("pong")
 			"pong"
