@@ -70,7 +70,7 @@ module ScormCloud
 
 		# Execute the call - returns response body or redirect url
 		def execute_call_plain(url)
-			res = Net::HTTP.get_response(URI.parse(URI::encode (url)))
+			res = Net::HTTP.get_response(URI.parse(URI::encode(url)))
 			case res
 			when Net::HTTPRedirection
 				# Return the new URL
